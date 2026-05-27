@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en" class="2xl:text-xl"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.0.5"><meta name="darkreader-lock"><title>Error 404 — CowxOS — CowxOS</title>
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://cowxos.org/cowxos-website/404/">
+<meta property="og:title" content="Error 404 — CowxOS">
+<meta property="og:url" content="https://cowxos.org/cowxos-website/404/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cowxos.org/cowxos-website/_astro/default.DKkLOjN7_kUgK7.webp">
+<meta property="og:image:alt" content="Error 404 — CowxOS">
+
+<meta name="twitter:card" content="summary_large_image"><link rel="shortcut icon" href="/cowxos-website/favicon.svg"><link rel="icon" type="image/svg+xml" href="/cowxos-website/favicon.svg"><link rel="mask-icon" href="/cowxos-website/favicon.svg" color="#8D46E7"><link rel="sitemap" href="/cowxos-website/sitemap-index.xml"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="swap"><script type="module" src="/cowxos-website/_astro/ClientRouter.astro_astro_type_script_index_0_lang.DmQZLfuR.js"></script><link rel="stylesheet" href="/cowxos-website/_astro/BaseLayout.B1o0hVeJ.css"></head> <body class="antialiased text-gray-900 dark:text-gray-200 tracking-tight bg-white dark:bg-gray-950">  <section class="flex items-center h-full p-16"> <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8"> <div class="max-w-md text-center"> <h2 class="mb-8 font-bold text-9xl"> <span class="sr-only">Error</span> <span class="bg-clip-text bg-linear-to-r from-primary-500 to-secondary-500">404</span> </h2> <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p> <p class="mt-4 mb-8 text-lg text-gray-600 dark:text-gray-400">
+But dont worry, you can find plenty of other things on our homepage.
+</p> <a rel="noopener noreferrer" href="/cowxos-website" class="btn ml-4">Back to homepage</a> </div> </div> </section>  <script>(function(){const defaultTheme = "dark";
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+
+  const setThemeMode = () => {
+    if (
+      (defaultTheme && defaultTheme.endsWith(':only')) ||
+      (!localStorage.theme && defaultTheme !== 'system')
+    ) {
+      applyTheme(defaultTheme.replace(':only', ''));
+    } else if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      applyTheme('dark');
+    } else {
+      applyTheme('light');
+    }
+  };
+
+  // Runs on initial navigation
+  setThemeMode();
+
+  // Runs on initial navigation
+  document.addEventListener('astro:after-swap', setThemeMode);
+
+  function attachEvent(selector, event, fn) {
+    const matches = typeof selector === 'string' ? document.querySelectorAll(selector) : selector;
+    if (matches && matches.length) {
+      matches.forEach((elem) => {
+        elem.addEventListener(event, (e) => fn(e, elem), false);
+      });
+    }
+  }
+
+  const onLoad = () => {
+    // This only runs once.
+    let lastKnownScrollPosition = window.scrollY;
+    let ticking = true;
+
+    attachEvent('[data-aw-toggle-menu]', 'click', (_, elem) => {
+      elem.classList.toggle('expanded');
+      document.body.classList.toggle('overflow-hidden');
+      document.getElementById('header')?.classList.toggle('h-screen');
+      document.getElementById('gradient')?.classList.toggle('hidden');
+      document.querySelector('#header nav')?.classList.toggle('hidden');
+    });
+
+    attachEvent('[data-aw-toggle-color-scheme]', 'click', () => {
+      if (defaultTheme.endsWith(':only')) {
+        return;
+      }
+      document.documentElement.classList.toggle('dark');
+      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+
+    function applyHeaderStylesOnScroll() {
+      const header = document.getElementById('header');
+      if (!header) return;
+      if (lastKnownScrollPosition > 60 && !header.classList.contains('scroll')) {
+        header.classList.add('scroll');
+      } else if (lastKnownScrollPosition <= 60 && header.classList.contains('scroll')) {
+        header.classList.remove('scroll');
+      }
+      ticking = false;
+    }
+    applyHeaderStylesOnScroll();
+
+    attachEvent([document], 'scroll', () => {
+      lastKnownScrollPosition = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          applyHeaderStylesOnScroll();
+        });
+        ticking = true;
+      }
+    });
+  };
+
+  document.addEventListener('astro:page-load', onLoad);
+
+  const onPageShow = () => {
+    document.documentElement.classList.add('motion-safe:scroll-smooth');
+    const elem = document.querySelector('[data-aw-toggle-menu]');
+    if (elem) {
+      elem.classList.remove('expanded');
+    }
+    document.body.classList.remove('overflow-hidden');
+    document.getElementById('header')?.classList.remove('h-screen');
+    document.querySelector('#header nav')?.classList.add('hidden');
+  };
+  window.onpageshow = onPageShow;
+})();</script> </body> </html>
