@@ -8,8 +8,14 @@ export const getLastUpdated = (entry: CollectionEntry<'post'>): Date | undefined
     try {
       ({ date } = getFileCommitDate(currentFilePath, 'newest'));
     } catch (e) {
-      console.log(e);
+      // git not available, fall through to frontmatter
     }
+  }
+  if (!date && entry.data.updateDate) {
+    date = entry.data.updateDate;
+  }
+  if (!date && entry.data.publishDate) {
+    date = entry.data.publishDate;
   }
   return date;
 };
@@ -21,8 +27,11 @@ export const getCreatedDate = (entry: CollectionEntry<'post'>): Date | undefined
     try {
       ({ date } = getFileCommitDate(currentFilePath, 'oldest'));
     } catch (e) {
-      console.log(e);
+      // git not available, fall through to frontmatter
     }
+  }
+  if (!date && entry.data.publishDate) {
+    date = entry.data.publishDate;
   }
   return date;
 };

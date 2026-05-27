@@ -11,8 +11,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.origin,
-  base: SITE.basePathname,
+  site: SITE.origin,           // https://cowxos.org/
+  base: '/cowxos-website/',
   output: 'static',
   integrations: [sitemap(), icon(), react()],
   vite: {

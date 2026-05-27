@@ -5,57 +5,57 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* --- Primary: Bright Cyan (#00CCFF) --- */
-  --color-primary-50: #e6faff;
-  --color-primary-100: #ccf5ff;
-  --color-primary-200: #99ebff;
-  --color-primary-300: #66e0ff;
-  --color-primary-400: #33d6ff;
-  --color-primary-500: #00ccff; /* Base — #0cf from logo */
-  --color-primary-600: #00a3cc;
-  --color-primary-700: #007a99;
-  --color-primary-800: #005266;
-  --color-primary-900: #002933;
-  --color-primary-950: #001419;
+  /* --- Primary: Rich Emerald Green (#10B981) --- */
+  --color-primary-50: #ecfdf5;
+  --color-primary-100: #d1fae5;
+  --color-primary-200: #a7f3d0;
+  --color-primary-300: #6ee7b7;
+  --color-primary-400: #34d399;
+  --color-primary-500: #10b981; /* Base — emerald */
+  --color-primary-600: #059669;
+  --color-primary-700: #047857;
+  --color-primary-800: #065f46;
+  --color-primary-900: #064e3b;
+  --color-primary-950: #022c22;
 
-  /* --- Secondary: Muted Teal Green (#00AA88) --- */
-  --color-secondary-50: #e6fff9;
-  --color-secondary-100: #ccfff3;
-  --color-secondary-200: #99ffe7;
-  --color-secondary-300: #66ffdb;
-  --color-secondary-400: #33ffcf;
-  --color-secondary-500: #00aa88; /* Base — #0a8 from logo */
-  --color-secondary-600: #008870;
-  --color-secondary-700: #006654;
-  --color-secondary-800: #004438;
-  --color-secondary-900: #00221c;
-  --color-secondary-950: #00110e;
+  /* --- Secondary: Warm Amber (#F59E0B) --- */
+  --color-secondary-50: #fffbeb;
+  --color-secondary-100: #fef3c7;
+  --color-secondary-200: #fde68a;
+  --color-secondary-300: #fcd34d;
+  --color-secondary-400: #fbbf24;
+  --color-secondary-500: #f59e0b; /* Base — amber */
+  --color-secondary-600: #d97706;
+  --color-secondary-700: #b45309;
+  --color-secondary-800: #92400e;
+  --color-secondary-900: #78350f;
+  --color-secondary-950: #451a03;
 
-  /* --- Accent: Neon Mint (#00FFCC) --- */
-  --color-accent-50: #e6fffb;
-  --color-accent-100: #ccfff7;
-  --color-accent-200: #99ffef;
-  --color-accent-300: #66ffe7;
-  --color-accent-400: #33ffdf;
-  --color-accent-500: #00ffcc; /* Base — #0fc from logo */
-  --color-accent-600: #00cca3;
-  --color-accent-700: #00997a;
-  --color-accent-800: #00664f;
-  --color-accent-900: #003329;
-  --color-accent-950: #001a14;
+  /* --- Accent: Bright Sky Blue (#0EA5E9) --- */
+  --color-accent-50: #f0f9ff;
+  --color-accent-100: #e0f2fe;
+  --color-accent-200: #bae6fd;
+  --color-accent-300: #7dd3fc;
+  --color-accent-400: #38bdf8;
+  --color-accent-500: #0ea5e9; /* Base — sky blue */
+  --color-accent-600: #0284c7;
+  --color-accent-700: #0369a1;
+  --color-accent-800: #075985;
+  --color-accent-900: #0c4a6e;
+  --color-accent-950: #082f49;
 
   /* --- Surface Neutrals --- */
-  --color-surface-50: #f0fafa;
-  --color-surface-100: #d9f2f2;
-  --color-surface-200: #b3e5e5;
-  --color-surface-300: #8dd8d8;
-  --color-surface-400: #66cccc;
-  --color-surface-500: #40bfbf;
-  --color-surface-600: #2d8c8c;
-  --color-surface-700: #1a5959;
-  --color-surface-800: #0d2e2e;
-  --color-surface-900: #061717;
-  --color-surface-950: #020202; /* Base — #020202 from logo */
+  --color-surface-50: #f8fafc;
+  --color-surface-100: #f1f5f9;
+  --color-surface-200: #e2e8f0;
+  --color-surface-300: #cbd5e1;
+  --color-surface-400: #94a3b8;
+  --color-surface-500: #64748b;
+  --color-surface-600: #475569;
+  --color-surface-700: #334155;
+  --color-surface-800: #1e293b;
+  --color-surface-900: #0f172a;
+  --color-surface-950: #020617;
 
   --font-sans:
     'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',

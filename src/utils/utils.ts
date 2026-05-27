@@ -29,8 +29,8 @@ export const enum ISOEdition {
   KDE = 'kde',
 }
 
-const direct_base_link = 'https://cdn77.cachyos.org/ISO';
-const sourceforge_base_link = 'https://sourceforge.net/projects/cachyos-arch/files/gui-installer';
+const direct_base_link = 'https://cdn.cowxos.org/ISO';
+const sourceforge_base_link = 'https://sourceforge.net/projects/cowxos-arch/files/gui-installer';
 const torrent_base_link = 'https://torrents.soulharsh007-codewerkstatt.de/processed';
 const magnet_base_link = 'https://torrents.soulharsh007-codewerkstatt.de/magnet';
 
@@ -41,12 +41,12 @@ export const generateDownloadLink = (
 ): string => {
   switch (source) {
     case ISOSource.DIRECT:
-      return `${direct_base_link}/${edition}/${release}/cachyos-${edition}-linux-${release}.iso`;
+      return `${direct_base_link}/${edition}/${release}/cowxos-${edition}-linux-${release}.iso`;
     case ISOSource.MAGNET:
       return `${magnet_base_link}/${edition}/${release}`;
     case ISOSource.SOURCEFORGE:
-      return `${sourceforge_base_link}/${edition}/${release}/cachyos-${edition}-linux-${release}.iso/download`;
+      return `${sourceforge_base_link}/${edition}/${release}/cowxos-${edition}-linux-${release}.iso/download`;
     case ISOSource.TORRENT:
-      return `${torrent_base_link}//cachyos-${edition}-linux-${release}.torrent`;
+      return `${torrent_base_link}//cowxos-${edition}-linux-${release}.torrent`;
   }
 };

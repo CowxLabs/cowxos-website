@@ -1,4 +1,4 @@
 export default {
-  desktopISOVersion: '260426',
-  handheldISOVersion: '260426',
+  desktopISOVersion: '260526',
+  handheldISOVersion: '260526',
 };

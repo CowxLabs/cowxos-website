@@ -12,7 +12,7 @@ export const headerData = {
     },
     {
       text: 'Github',
-      href: 'https://github.com/cachyos',
+      href: 'https://github.com/cowxos',
     },
   ],
 };
@@ -22,15 +22,15 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Features', href: 'https://wiki.cachyos.org/cachyos_basic/why_cachyos/' },
+        { text: 'Features', href: 'https://wiki.cowxos.org/cowxos_basic/why_cowxos/' },
         { text: 'Team', href: getPermalink('/about/#team') },
       ],
     },
     {
       title: 'Support',
       links: [
-        { text: 'Docs', href: 'https://wiki.cachyos.org/' },
-        { text: 'Community Forum', href: 'https://discuss.cachyos.org/' },
+        { text: 'Docs', href: 'https://wiki.cowxos.org/' },
+        { text: 'Community Forum', href: 'https://discuss.cowxos.org/' },
       ],
     },
     {
@@ -43,18 +43,18 @@ export const footerData = {
     { text: 'Privacy Policy', href: '#' },
   ],
   socialLinks: [
-    { arialabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/cachyos' },
+    { arialabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/cowxos' },
     {
       arialabel: 'Discord',
       icon: 'tabler:brand-discord',
-      href: 'https://discord.gg/cachyos-862292009423470592',
+      href: 'https://discord.gg/cowxos',
     },
-    { arialabel: 'Reddit', icon: 'tabler:brand-reddit', href: 'https://www.reddit.com/r/cachyos' },
-    { arialabel: 'Patreon', icon: 'tabler:brand-patreon', href: 'https://www.patreon.com/CachyOS' },
-    { arialabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/cachyos' },
+    { arialabel: 'Reddit', icon: 'tabler:brand-reddit', href: 'https://www.reddit.com/r/cowxos' },
+    { arialabel: 'Patreon', icon: 'tabler:brand-patreon', href: 'https://www.patreon.com/CowxOS' },
+    { arialabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/cowxos' },
   ],
   footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-xs bg-[url(~/assets/images/logo.svg)]"></span>
-    Made by <a class="text-primary-600 dark:text-white font-bold decoration-gray-400 decoration-dotted underline" href="https://cachyos.org/"> CachyOS</a> · All rights reserved.
+    Made by <a class="text-primary-600 dark:text-white font-bold decoration-gray-400 decoration-dotted underline" href="https://cowxos.org/"> CowxOS</a> · All rights reserved.
   `,
 };

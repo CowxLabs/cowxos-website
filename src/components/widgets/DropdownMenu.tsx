@@ -11,7 +11,7 @@ interface Props {
   };
 }
 
-const DOWNLOADS_API_ENDPOINT = 'https://iso-stats.cachyos.org/api/download';
+const DOWNLOADS_API_ENDPOINT = 'https://iso-stats.cowxos.org/api/download';
 
 async function handleDirectButton(edition_name: string) {
   fetch(DOWNLOADS_API_ENDPOINT, {
